@@ -1,8 +1,8 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');//Linkando o canvas com o HTML
 
-ctx.canvas.width = 700;
-ctx.canvas.height = 300;
+ctx.canvas.width = 1400;
+ctx.canvas.height = 900;
 
 const palavras = ['MINECRAFT', 'PICA-PAU', 'PSICOLOGO', 'CALABRESA', 'JAVASCRIPT', 'CORAÇÃO', 'ABACAXI', 'TOMADA', 'CACHORRO', 'VERMELHO'];
 var quantidadeErros = 0;
@@ -22,8 +22,8 @@ function teclaPressionada() {
         adicionarTentativa();
         for (var i = 0; i < palavraSecreta.length; i++) {
             if (palavraSecreta [i] == (event.key).toUpperCase()) {
-                ctx.fonte = "35px";
-                ctx.fillText((event.key).toUpperCase(), 20 + (35 * i), 200);
+                ctx.fonte = "70px";
+                ctx.fillText((event.key).toUpperCase(), 60 + (70 * i), 400);
                 acertos++;
             }
         }
@@ -38,22 +38,22 @@ function teclaPressionada() {
 function adicionarTentativa() {
     if (!tentativas.includes(event.key)) {
         tentativas = tentativas + event.key;
-        ctx.font = "20px Arial";
-        ctx.fillText("Tentativas: " + tentativas.toUpperCase(), 20, 280);
+        ctx.font = "40px Arial";
+        ctx.fillText("Tentativas: " + tentativas.toUpperCase(), 40, 560);
     }
 }
 
 function verificarFimJogo() {
     if (quantidadeErros >= 6) {
-        ctx.font = "20px Arial";
-        ctx.fillText("Game Over! A palavra era: " + palavraSecreta, 200, 100);
+        ctx.font = "40px Arial";
+        ctx.fillText("Game Over! A palavra era: " + palavraSecreta, 400, 200);
 		window.onkeypress = null;
 		return;
    }
 
    if (acertos == palavraSecreta.length) {
-	   ctx.font = "20px Arial";
-	   ctx.fillText("Você ganhou", 200, 100);
+	   ctx.font = "40px Arial";
+	   ctx.fillText("Você ganhou", 400, 200);
 	   window.onkeypress= null;
 	   return;
    }
@@ -61,27 +61,27 @@ function verificarFimJogo() {
 }
 
 function desenharPoste() {
-	ctx.moveTo(10, 10);
-	ctx.lineTo(10, 100);
+	ctx.moveTo(20, 20);
+	ctx.lineTo(20, 200);
 	ctx.stroke();
 }
 
 function desenharBarraSuperior() {
-	ctx.moveTo(10, 10);
-	ctx.lineTo(60, 10);
+	ctx.moveTo(20, 20);
+	ctx.lineTo(120, 20);
 	ctx.stroke();
 }
 
 function desenharApoio() {
-	ctx.moveTo(60, 10);
-	ctx.lineTo(60, 30);
+	ctx.moveTo(120, 20);
+	ctx.lineTo(120, 60);
 	ctx.stroke();
 }
 
 function desenharTracos() {
 	for (var i = 0; i < palavraSecreta.length; i++) {
-		ctx.moveTo(20 + (35 * i), 200);
-		ctx.lineTo(50 + (35 * i), 200);
+		ctx.moveTo(40 + (70 * i), 400);
+		ctx.lineTo(100 + (70 * i), 400);
 		ctx.stroke();
 	}
 }
@@ -111,37 +111,37 @@ function desenharBoneco(quantidadeErros) {
 
 function desenharCabeca() {
 	ctx.beginPath();
-	ctx.arc(60, 40, 10, 0, 2 * Math.PI);
+	ctx.arc(120, 80, 20, 0, 2 * Math.PI);
 	ctx.stroke();
 }
 
 function desenharTronco() {
-	ctx.moveTo(60, 50);
-	ctx.lineTo(60, 80);
+	ctx.moveTo(120, 100);
+	ctx.lineTo(120, 160);
 	ctx.stroke();
 }
 
 function desenharBracoEsquerdo() {
-	ctx.moveTo(60, 60);
-	ctx.lineTo(50, 70);
+	ctx.moveTo(120, 120);
+	ctx.lineTo(100, 140);
 	ctx.stroke();
 }
 
 function desenharBracoDireito() {
-	ctx.moveTo(60, 60);
-	ctx.lineTo(70, 70);
+	ctx.moveTo(120, 120);
+	ctx.lineTo(140, 140);
 	ctx.stroke();
 }
 
 function desenharPernaEsquerda() {
-	ctx.moveTo(60, 80);
-	ctx.lineTo(50, 90);
+	ctx.moveTo(120, 160);
+	ctx.lineTo(100, 180);
 	ctx.stroke();
 }
 
 function desenharPernaDireita() {
-	ctx.moveTo(60, 80);
-	ctx.lineTo(70, 90);
+	ctx.moveTo(120, 160);
+	ctx.lineTo(140, 180);
 	ctx.stroke();
 }
 
