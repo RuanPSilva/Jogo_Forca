@@ -23,13 +23,13 @@ function teclaPressionada() {
         for (var i = 0; i < palavraSecreta.length; i++) {
             if (palavraSecreta [i] == (event.key).toUpperCase()) {
                 ctx.fonte = "35px";
-                ctx.fillText((event.key).toUpperCase(), 20 + (35 * 1), 200);
+                ctx.fillText((event.key).toUpperCase(), 20 + (35 * i), 200);
                 acertos++;
             }
         }
     } else {
         adicionarTentativa();
-        quantidadeErros;
+        quantidadeErros++;
         desenharBoneco(quantidadeErros);
     }
     verificarFimJogo();
@@ -46,13 +46,14 @@ function adicionarTentativa() {
 function verificarFimJogo() {
     if (quantidadeErros >= 6) {
         ctx.font = "20px Arial";
-        ctx.fillText("Game Over!")
-
- 
+        ctx.fillText("Game Over! A palavra era: " + palavraSecreta, 200, 100);
+		window.onkeypress = null;
+		return;
    }
+
    if (acertos == palavraSecreta.length) {
 	   ctx.font = "20px Arial";
-	   ctx.fillText("Voçê ganhou", 200, 100);
+	   ctx.fillText("Você ganhou", 200, 100);
 	   window.onkeypress= null;
 	   return;
    }
@@ -67,7 +68,7 @@ function desenharPoste() {
 
 function desenharBarraSuperior() {
 	ctx.moveTo(10, 10);
-	ctx.lineTo(60, 30);
+	ctx.lineTo(60, 10);
 	ctx.stroke();
 }
 
@@ -110,7 +111,7 @@ function desenharBoneco(quantidadeErros) {
 
 function desenharCabeca() {
 	ctx.beginPath();
-	ctx.arc(50, 40, 10, 0, 2 * Math.PI);
+	ctx.arc(60, 40, 10, 0, 2 * Math.PI);
 	ctx.stroke();
 }
 
@@ -143,9 +144,6 @@ function desenharPernaDireita() {
 	ctx.lineTo(70, 90);
 	ctx.stroke();
 }
-
-		
-	
 
 
 
