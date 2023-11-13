@@ -1,10 +1,7 @@
 # Jogo_Forca
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neste projeto iremos fazer um jogo da Forca, e mpostraremos a sua UML com:Diagrama de Classe;Casos de Uso;Daiagrama de atividade e todos com suas respectivas documentações. Além de explicar todo o codígo do jogo envolvido.
 
-## Desenvolvimento inicial
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Começamos com o basico criando a pasta para cada codígo e uma pasta para imagens. Colocamos os codígos padrões do Html com um id de Canvas e a conexão para o Javascript e CSS.
-![image](https://github.com/RuanPSilva/Jogo_Forca/assets/127852225/e9cd2453-b921-44d2-b50c-3a7caa99b4e0)<br>
-Imagem inicial do jogo
+Autores: Kauan Jesus e Ruan Pablo
 
 ## Diagrama de Atividade
 ![image](https://github.com/RuanPSilva/Jogo_Forca/assets/127852225/c96d41fd-7c9b-4c84-b932-b61b0b1c0214)<br>
