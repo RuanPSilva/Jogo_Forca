@@ -9,6 +9,7 @@ Autores: Kauan Jesus e Ruan Pablo
 [Documentação Atividade.docx](https://github.com/RuanPSilva/Jogo_Forca/files/13167525/Documentacao.Atividade.docx)
 ## Diagrama de Casos de Uso
 ![image](https://github.com/RuanPSilva/Jogo_Forca/assets/127852225/d6aea400-f646-4b1f-b092-86f029c6f897)<br>
+> 🗒️**Nota:** Não colocamos dificuldade por conta que este diagrama de casos de uso, e uma outra versão da que eu estava utilizando anteriormente, então achei que seria melhor utilizar a versão que não tinha dificuldade.
 ### Documentação
 [Documentação Classe_De_Uso.docx](https://github.com/RuanPSilva/Jogo_Forca/files/13167517/Documentacao.Classe_De_Uso.docx)
 ## Diagrama de Classes
